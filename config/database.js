@@ -3,18 +3,18 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 const pool = new Pool({
-  user: process.env.DB_USERNAME,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.PORT,
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 });
 
 const sequelize = new Sequelize(
-  process.env.DB_DATABASE,
-  process.env.DB_USERNAME,
-  process.env.DB_PASSWORD, {
-  host: process.env.DB_HOST,
+  process.env.PGDATABASE,
+  process.env.PGUSER,
+  process.env.PGPASSWORD, {
+  host: process.env.PGHOST,
   dialect: 'postgres'
 });
 
