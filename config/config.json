@@ -1,15 +1,12 @@
 {
     "development": {
-      "username": "g155",
-      "password": "123456789",
-      "database": "devdbe2",
-      "host": "127.0.0.1",
+      "use_env_variable": "DATABASE_URL",
       "dialect": "postgres"
     },
     "test": {
-      "username": "root",
-      "password": "root",
-      "database": "database_test",
+      "username": "g155",
+      "password": "123456789",
+      "database": "devdbe2",
       "host": "127.0.0.1",
       "dialect": "postgres"
     },
